@@ -1,0 +1,20 @@
+{
+  "name": "uptimemonitoring",
+  "displayName": "UptimeMonitoring",
+  "description": "Agent-native uptime monitoring. Create monitors, check status, and assert health on URLs from inside Cursor.",
+  "version": "0.1.0",
+  "author": { "name": "Monitive" },
+  "homepage": "https://uptimemonitoring.com/docs/mcp/",
+  "repository": "https://github.com/uptimemonitoring/cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "uptime",
+    "monitoring",
+    "mcp",
+    "observability",
+    "incident",
+    "healthcheck",
+    "synthetic-monitoring"
+  ],
+  "mcpServers": "mcp.json"
+}

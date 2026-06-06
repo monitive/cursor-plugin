@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON is well-formed
+        run: |
+          jq empty .cursor-plugin/plugin.json
+          jq empty mcp.json
+
+      - name: Assert required manifest field
+        run: jq -e '.name' .cursor-plugin/plugin.json
+
+      - name: Assert MCP server URL
+        run: jq -e '.mcpServers.uptimemonitoring.url == "https://api.uptimemonitoring.com/mcp"' mcp.json
+
+      - name: Format check
+        run: npx --yes prettier@3 --check "**/*.{json,md,yml}"

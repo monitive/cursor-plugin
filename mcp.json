@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "uptimemonitoring": {
+      "url": "https://api.uptimemonitoring.com/mcp"
+    }
+  }
+}
