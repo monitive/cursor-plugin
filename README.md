@@ -1,11 +1,11 @@
-# UptimeMonitoring for Cursor
+# Monitive for Cursor
 
 Monitor URLs, check incidents, and assert service health — all from inside your AI agent.
 
-This is a thin, open-source Cursor plugin that installs the UptimeMonitoring MCP server into Cursor in
+This is a thin, open-source Cursor plugin that installs the Monitive MCP server into Cursor in
 one click, created and maintained by [Monitive](https://www.monitive.com). Once installed, Cursor agents
 gain tools to create and manage uptime monitors, query incident status, and assert that URLs are healthy —
-without leaving the editor. Documentation: https://uptimemonitoring.com/docs/mcp/
+without leaving the editor. Documentation: https://monitive.com/docs/mcp/
 
 > **Marketplace status:** The Cursor Marketplace listing is coming soon (submission in progress). Until
 > it is approved, use the install instructions below.
@@ -14,7 +14,7 @@ without leaving the editor. Documentation: https://uptimemonitoring.com/docs/mcp
 
 ### One-click
 
-[Install in Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=uptimemonitoring&config=eyJ1cmwiOiJodHRwczovL2FwaS51cHRpbWVtb25pdG9yaW5nLmNvbS9tY3AifQ==)
+[Install in Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=monitive&config=eyJ1cmwiOiJodHRwczovL2FwaS5tb25pdGl2ZS5jb20vbWNwIn0=)
 
 This button will also be available directly from the Cursor Marketplace once the listing is approved.
 
@@ -25,15 +25,15 @@ Add the following to your `.cursor/mcp.json` (OAuth — recommended):
 ```json
 {
   "mcpServers": {
-    "uptimemonitoring": {
-      "url": "https://api.uptimemonitoring.com/mcp"
+    "monitive": {
+      "url": "https://api.monitive.com/mcp"
     }
   }
 }
 ```
 
 On first use, Cursor will prompt you to authorize via OAuth. Follow the browser prompt to connect your
-UptimeMonitoring account.
+Monitive account.
 
 #### API key (alternative)
 
@@ -42,16 +42,16 @@ For trusted server-to-server contexts where OAuth is not practical, you can use 
 ```json
 {
   "mcpServers": {
-    "uptimemonitoring": {
-      "url": "https://api.uptimemonitoring.com/mcp",
-      "headers": { "Authorization": "Bearer ${env:UPTIMEMONITORING_API_KEY}" }
+    "monitive": {
+      "url": "https://api.monitive.com/mcp",
+      "headers": { "Authorization": "Bearer ${env:MONITIVE_API_KEY}" }
     }
   }
 }
 ```
 
-Set `UPTIMEMONITORING_API_KEY` to an API key from your UptimeMonitoring dashboard. Keys follow the
-`umk_live_...` format.
+Set `MONITIVE_API_KEY` to an API key from your Monitive dashboard at https://my.monitive.com/keys. Keys follow the
+`mk_live_...` format; keys created before 17 November 2026 start `umk_live_...` and keep working.
 
 ## What you get
 
