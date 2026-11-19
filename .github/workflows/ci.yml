@@ -19,7 +19,7 @@ jobs:
         run: jq -e '.name' .cursor-plugin/plugin.json
 
       - name: Assert MCP server URL
-        run: jq -e '.mcpServers.uptimemonitoring.url == "https://api.uptimemonitoring.com/mcp"' mcp.json
+        run: jq -e '.mcpServers.monitive.url == "https://api.monitive.com/mcp"' mcp.json
 
       - name: Format check
         run: npx --yes prettier@3 --check "**/*.{json,md,yml}"

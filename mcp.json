@@ -1,7 +1,7 @@
 {
   "mcpServers": {
-    "uptimemonitoring": {
-      "url": "https://api.uptimemonitoring.com/mcp"
+    "monitive": {
+      "url": "https://api.monitive.com/mcp"
     }
   }
 }
